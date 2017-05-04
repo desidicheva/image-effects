@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Hover Effects</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+.title{
+	text-align:center;
+	
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.spacer{
+	padding:30px 0;
+}
+
+
+.wrapper{
+  position: relative;
+  width: 100%;
+}
+
+
+/* Image on top*/
+
+
+
+
+.overlay-fadein {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.wrapper:hover .overlay-fadein {
+  opacity: 1;
+}
+
+
+/*Slide From Top*/
+
+
+
+.overlay-top {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.wrapper:hover .overlay-top {
+  bottom: 0;
+  height: 100%;
+}
+
+
+
+/* Slide in from Bottom*/
+
+.overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.wrapper:hover .overlay-bottom {
+  height: 100%;
+}
+
+
+/* Overlay Right*/
+.overlay-right {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.wrapper:hover .overlay-right {
+  width: 100%;
+  left: 0;
+}
+
+/* Left*/
+
+.overlay-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.wrapper:hover .overlay-left {
+  width: 100%;
+}
+
+
+/*Opacity*/
+
+.img-avatar{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.wrapper:hover .img-avatar {
+  opacity: 0.3;
+}
+
+.wrapper:hover .middle {
+  opacity: 1;
+}
+
+.intro {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="row spacer">
+<div class="col-sm-12"><h1 class="title">Our Team</h1></div></div>
+
+
+<div class="container">
+<div class="row">
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="image">
+  <div class="overlay-fadein">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="image">
+  <div class="overlay-top">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="image">
+  <div class="overlay-bottom">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+</div>
+
+</div><!-- close row-->
+
+
+
+<div class="row spacer">
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="image">
+  <div class="overlay-right">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="image">
+  <div class="overlay-left">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="wrapper">
+  <img src="avatar.jpg" alt="Avatar" class="img-avatar">
+ <div class="middle">
+    <div class="intro">Hello!</div>
+  </div>
+</div>
+</div>
+
+</div><!-- close row 2-->
+
+
+
+
+
+
+</div><!-- close container-->
+
+</body>
+</html>
